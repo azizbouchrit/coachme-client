@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.less';
+import { Redirect, Route, Switch } from 'react-router';
+import Navbar from './components/navbar/Navbar';
+import Home from './components/Home/Home';
+require('./App.less')
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <main className='main-container'>
+        <Switch>
+        <Redirect from="/" exact to="/home" />
+        <Route path="/home" exact component={Home} />
+
+        </Switch>
+      </main>
     </div>
   );
 }
