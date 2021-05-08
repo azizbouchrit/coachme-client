@@ -10,6 +10,7 @@
   justify-content: space-between;
   background: #fff;
   box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+  z-index: 1;
 }
 
 .brand {
@@ -22,10 +23,12 @@
   margin: 0;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 1.5rem;
   font-weight: 700;
 }
 
 .nav-menu--item{
   cursor: pointer;
+  color: var(--primary);
 }
