@@ -1,0 +1,27 @@
+.login-page {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 50%, transparent),
+    url('../../assets/images/gym-bg.jpg') center/cover no-repeat
+      border-box;
+  width: 100%;
+  height: calc(100vh - 53px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page h1{
+  text-align: center;
+  color: white;
+  font-style: italic;
+  font-size: 2.5rem;
+}
+
+.login-form {
+  /* background: rgba(255, 255, 255, 0.74); */
+  width: 300px;
+  /* border: 2px solid rgb(214, 214, 214); */
+  border-radius: 7px;
+  padding: 2rem;
+  color: white;
+}
