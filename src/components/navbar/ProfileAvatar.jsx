@@ -59,10 +59,13 @@ class ProfileAvatar extends Component {
         <div
           className='navbar-avatar'
           onClick={this.handleClick}
-          style={{
-            // backgroundImage: 'url(' + user.avatar + ')'
-            backgroundColor: 'var(--primary)'
-          }}
+          style={
+            user.avatar
+              ? {
+                  backgroundImage: 'url(' + user.avatar + ')'
+                }
+              : { backgroundColor: 'var(--primary)' }
+          }
         >
           {user && (
             <span>

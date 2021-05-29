@@ -1,11 +1,29 @@
 import { Button } from 'antd'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Chip, Biceps } from '../../assets/icons'
 import { RiseOutlined } from '@ant-design/icons'
 import './Home.css'
-import {Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
+import andrei from '../../assets/images/arms-workout.jpg'
+import instance from './../../config/httpClient'
+import { openErrorNotification } from './../../utils/antd-notifications'
+import ProfileAvatar from './../Navbar/ProfileAvatar'
 
 const Home = () => {
+  const [popularCoaches, setPopularCoaches] = useState([])
+
+  useEffect(() => {
+    async function getPopularCoaches () {
+      try {
+        const res = await instance.get('users/coaches/popular')
+        setPopularCoaches(res.data)
+      } catch (e) {
+        openErrorNotification('Something Went Wrong')
+      }
+    }
+    getPopularCoaches()
+  }, [])
+
   return (
     <React.Fragment>
       <section className='landing'>
@@ -60,6 +78,24 @@ const Home = () => {
               members and coaches.
             </p>
           </div>
+        </div>
+      </section>
+      <section className='home-features'>
+        <h1>Popular Coaches</h1>
+        <div className='popular-coaches-container'>
+          {popularCoaches.map(coach => (
+            <div key={coach._id} className='popular-coach-card'>
+              <div
+                style={{ backgroundImage: `url(${coach.avatar})` }}
+                className='popular-coach-card__picture'
+              />
+              <div className='popular-coach-card__description'>
+                <h3>{coach.firstName + " " + coach.lastName}</h3>
+                <p>{coach.totalSubscriptions} subscriptions</p>
+                <Button type='link'>View Profile</Button>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </React.Fragment>
