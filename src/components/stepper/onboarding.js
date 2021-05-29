@@ -1,11 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { Helmet } from "react-helmet";
 import MasterForm from "./stepper";
 import { Container, Row, Col } from "reactstrap";
 import "./styles.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { PageHeader } from 'antd';
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 
 function On() {
@@ -13,7 +11,7 @@ function On() {
     
     <div className="App">
         <Helmet>
-        <style>{"body { background-color: lightgray; }"}</style>
+        {/* <style>{"body { background-color: lightgray; }"}</style> */}
         </Helmet>
         <Container>
         <Row>
