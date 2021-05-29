@@ -1,0 +1,12 @@
+.starting {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 50%, transparent),
+    url('../../assets/images/training.jpg') center/cover no-repeat
+    border-box;
+    width: 100%;
+    height: calc(100vh - 53px);
+    position: relative;
+    }
+    .site-page-header {
+        border: 1px solid rgb(235, 237, 240);
+        
+    }

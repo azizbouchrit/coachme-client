@@ -1,0 +1,44 @@
+/* .App {
+    text-align: bottom;
+width: 100%;
+height: calc(100vh - 53px);
+position: relative;
+  } */
+  
+  .container {
+    position: absolute;
+    bottom : 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    background: lightgray;
+  }
+
+  .site-page-header {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 50%, transparent),
+    url('../../assets/images/training.jpg') center/cover no-repeat
+    border-box;
+    width: 100%;
+    height: calc(60vh - 50px);
+  }
+  .code-box-demo .ant-input-number {
+    margin-right: 10px;
+  }
+  .ant-row-rtl .code-box-demo .ant-input-number {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+  label {
+    font-family: 'Roboto Medium', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  #number {
+    width: 3em;
+  }
+  .padding{
+    width: 10%;
+  }
