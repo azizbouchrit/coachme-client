@@ -1,0 +1,65 @@
+.program-header {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../assets/images/program-picture.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: calc(55vh - 53px);
+  width: 100%;
+}
+.program-details {
+  width: 100%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.program-details h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: "#40A9FF";
+  line-height: 3rem;
+}
+.program-description .star {
+  cursor: pointer;
+  transition: color 200ms;
+}
+/*
+.program-content .header-text {
+ 
+}
+.header-text h2 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 54px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+.slider {
+  height: 900px;
+  width: 500px;
+}*/
+.program-details .program-description {
+  width: 45%;
+}
+.main-button-slider {
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 12px 20px;
+  background-color: #3ca7ff;
+  color: #fff;
+  letter-spacing: 0.25px;
+}
+.site-card-wrapper {
+  border-radius: 15px;
+  margin-top: -5%;
+  text-align: left;
+}
+.program-details {
+  margin: 20px;
+}
