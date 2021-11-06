@@ -14,7 +14,7 @@ const Login = () => {
     if (data) {
       localStorage.setItem("token", data.token)
       localStorage.setItem("user", JSON.stringify(data.user))
-      history.push("/onboarding")
+      window.location.href = "/onboarding"
     }
   }
 

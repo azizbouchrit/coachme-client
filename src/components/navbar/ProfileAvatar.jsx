@@ -25,16 +25,18 @@ class ProfileAvatar extends Component {
   }
 
   handleClick () {
-    if (!this.state.showProfileDropdown) {
-      // attach/remove event handler
-      document.addEventListener('click', this.handleOutsideClick, false)
-    } else {
-      document.removeEventListener('click', this.handleOutsideClick, false)
-    }
+    // if (!this.state.showProfileDropdown) {
+    //   // attach/remove event handler
+    //   document.addEventListener('click', this.handleOutsideClick, false)
+    // } else {
+    //   document.removeEventListener('click', this.handleOutsideClick, false)
+    // }
 
-    this.setState(prevState => ({
-      showProfileDropdown: !prevState.showProfileDropdown
-    }))
+    // this.setState(prevState => ({
+    //   showProfileDropdown: !prevState.showProfileDropdown
+    localStorage.clear()
+    window.location.href = "/"
+    // }))
   }
 
   handleOutsideClick (e) {
@@ -59,13 +61,10 @@ class ProfileAvatar extends Component {
         <div
           className='navbar-avatar'
           onClick={this.handleClick}
-          style={
-            user.avatar
-              ? {
-                  backgroundImage: 'url(' + user.avatar + ')'
-                }
-              : { backgroundColor: 'var(--primary)' }
-          }
+          style={{
+            // backgroundImage: 'url(' + user.avatar + ')'
+            backgroundColor: 'var(--primary)'
+          }}
         >
           {user && (
             <span>

@@ -1,0 +1,52 @@
+.profile-sidebar {
+  padding: 20px 0 10px 0;
+  background: #fff;
+}
+.profile-userpic , .img-responsive {
+  float: none;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+.member-profile-page{
+  margin: 20px 0;
+  text-align: center;
+}    
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-usertitle-email {
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.col-md-8 {
+margin-top: 60px;
+margin-right: 250px;
+margin-left: 250px;
+}
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 100px ;
+}
+.card {
+position: relative;
+display: flex;
+flex-direction: column;
+min-width: 0;
+word-wrap: break-word;
+background-color: #fff;
+background-clip: border-box;
+border: 0 solid transparent;
+border-radius: .25rem;
+margin-bottom: 1.5rem;
+box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
+}
